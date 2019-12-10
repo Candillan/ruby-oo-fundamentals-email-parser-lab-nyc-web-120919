@@ -12,6 +12,9 @@ class EmailAddressParser
   def parse
     split_emails = @email_addresses.split(/ |, |,/)
     split_emails = split_emails.uniq
+    
+    split_emails = split_emails.split(,).join
+    
     #split_emails.delete(" ")
   end
 end
