@@ -10,10 +10,10 @@ class EmailAddressParser
   attr_accessor :email_addresses
   
   def parse
-    split_emails = @email_addresses.split(/ |, |,/)
-    split_emails = split_emails.uniq
+    #split_emails = @email_addresses.split(/ |, |,/)
+    #split_emails = split_emails.uniq
     
-    split_emails = split_emails.split(,).join
+    split_emails = split_emails.split(" ").join(",").split(",").uniq
     
     #split_emails.delete(" ")
   end
